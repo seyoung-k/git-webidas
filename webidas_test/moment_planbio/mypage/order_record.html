@@ -1,0 +1,293 @@
+{*** 마이페이지 > 주문현황 | mypage/order_record.php ***}
+{ # header }
+
+<div class="content">
+    <div class="mypage_cont">
+
+        <div class="mypage_lately_info">
+            <div class="mypage_zone_tit">
+                <h3>{=__('주문현황')}</h3>
+            </div>
+            
+            <div class="account_total_price">
+                <h4>현재까지 총 주문금액 : {=gd_global_money_format(accountTotalPrice)}{=gd_global_currency_string()}</h4>
+            </div>
+            
+            <div class="date_check_box">
+                <form method="get" name="frmDateSearch">
+                    <input type="hidden" name="tap" value="{=gd_isset(tap, 'daily')}" />
+                    <h3> {=__('조회기간')} </h3>
+                    <!--{ ? tap == "monthly" }-->
+                    <div class="date_check_list" data-target-name="wDate[]">
+                        <button type="button" data-value="30" <!--{ ? searchPeriod == "30" }-->class="on"<!--{ / }-->>{=__('1개월')}</button>
+                        <button type="button" data-value="90" <!--{ ? searchPeriod == "90" }-->class="on"<!--{ / }-->>{=__('3개월')}</button>
+                        <button type="button" data-value="180" <!--{ ? searchPeriod == "180" }-->class="on"<!--{ / }-->>{=__('6개월')}</button>
+                        <button type="button" class="oneYear" data-value="365" <!--{ ? searchPeriod == "365" }-->class="on"<!--{ / }-->>1{=__('년')}</button>
+                    </div>
+                    <!-- //date_check_list -->
+                    <div class="date_check_calendar">
+                        <input type="text" id="picker2" name="wDate[]" class="anniversary js_datepicker-months" value="{wDate[0]}" autocomplete="off"/> ~ <input type="text" name="wDate[]" class="anniversary js_datepicker-months" value="{wDate[1]}" autocomplete="off"/>
+                    </div>
+                    <!-- //date_check_calendar -->
+                    <!--{ : }-->
+                    <div class="date_check_list" data-target-name="wDate[]">
+                        <button type="button" data-value="0" <!--{ ? searchPeriod == "0" }-->class="on"<!--{ / }-->>{=__('오늘')}</button>
+                        <button type="button" data-value="7" <!--{ ? searchPeriod == "7" }-->class="on"<!--{ / }-->>7{=__('일')}</button>
+                        <button type="button" data-value="15" <!--{ ? searchPeriod == "15" }-->class="on"<!--{ / }-->>15{=__('일')}</button>
+                        <button type="button" data-value="30" <!--{ ? searchPeriod == "30" }-->class="on"<!--{ / }-->>1{=__('개월')}</button>
+                        <button type="button" data-value="90" <!--{ ? searchPeriod == "90" }-->class="on"<!--{ / }-->>3{=__('개월')}</button>
+                        <button type="button" class="oneYear" data-value="365">1{=__('년')}</button>
+                    </div>
+                    <!-- //date_check_list -->
+                    <div class="date_check_calendar">
+                        <input type="text" id="picker2" name="wDate[]" class="anniversary js_datepicker" value="{wDate[0]}"/> ~ <input type="text" name="wDate[]" class="anniversary js_datepicker" value="{wDate[1]}"/>
+                    </div>
+                    <!-- //date_check_calendar -->
+                    <!--{ / }-->
+                    
+                    <button type="submit" class="btn_date_check"><em>{=__('조회')}</em></button>
+                </form>
+            </div>
+            <!-- //date_check_box -->
+
+            <div class="mypage_table_type statistics_table">
+                <table>
+                    <colgroup>
+                        <col style="width:20%"/>
+                        <col style="width:20%"/>
+                        <col style="width:20%"/>
+                        <col style="width:20%"/>
+                        <col style="width:20%"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>총 주문금액</th>
+                            <th>최대 주문금액</th>
+                            <th>총 주문건수</th>
+                            <th>총 주문상품수</th>
+                            <th>총 상품개수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--{ ? totalOrderRecord["totalOrderCnt"] > 0 }-->
+                        <tr>
+                            <!--// 총 주문금액 -->
+                            <td>
+                                {=gd_global_money_format(totalOrderRecord["totalOrderPrice"])}{=gd_global_currency_string()}
+                            </td>
+                            <!--// 최대 주문금액 -->
+                            <td>
+                                {=gd_global_money_format(totalOrderRecord["maxOrderPrice"])}{=gd_global_currency_string()}
+                            </td>
+                            <!--// 총 주문건수 -->
+                            <td>
+                                {=gd_isset(totalOrderRecord["totalOrderCnt"], 0)} 건
+                            </td>
+                            <!--// 총 주문상품수 -->
+                            <td>
+                                {=gd_isset(totalOrderRecord["totalOrderGoodsCnt"], 0)} 개
+                            </td>
+                            <!--// 총 상품갯수 -->
+                            <td>
+                                {=gd_isset(totalOrderRecord["totalGoodsCnt"], 0)} 개
+                            </td>
+                        </tr>
+                        <!--{ : }-->
+                        <tr>
+                            <td colspan="5">
+                                검색된 주문 정보가 없습니다.
+                            <td>
+                        </tr>
+                        <!--{ / }-->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mypage_lately_info_cont">
+                <span class="pick_list_num">
+                    <!--{ ? tap != "daily" }-->
+                    <b><span>검색 기간 주문금액 : {=gd_global_money_format(searchTotalPrice)}{=gd_global_currency_string()}</span></b>
+                    <!--{ / }-->
+                    <!--{ ? wDate[0] && wDate[1] && display }-->
+                    <b><span>{=gd_date_format('Y.m.d', wDate[0])}</span> ~ <span>{=gd_date_format('Y.m.d', wDate[1])}</span></b> {=__('까지의')}
+                    {=__('주문통계 내역 총')} <strong>{=number_format(total)}</strong> {=__('건')}
+                    <!--{ / }-->
+                </span>
+                <div class="search_tap_button">
+                    <button type="button" data-tap="daily">일별</button>
+                    <button type="button" data-tap="monthly">월별</button>
+                    <!--{ ? gMemberInfo["memberFl"] == "business" }-->
+                    <button type="button" data-tap="depart">부속회원별</button>
+                    <!--{ / }-->
+                    <button type="button" data-tap="product">상품별</button>
+                </div>
+                
+                <!-- 주문상품 리스트 -->
+                <!--// 주문통계 리스트 템플릿 자리 START -->
+                <div id="statistics_list">
+                    {#statistics_template}
+                </div>
+                <!--// 주문통계 리스트 템플릿 자리 END -->
+                <!--// 주문상품 리스트 -->
+                
+                <!--{ ? test == "y" }-->
+                <div class="statistics_button_wrap">
+                    <button type="button" class="statistics_excel_download">엑셀 다운로드</button>
+                </div>
+                <!--{ / }-->
+            </div>
+            <!-- //mypage_lately_info_cont -->
+        </div>
+        <!-- //mypage_lately_info -->
+
+        {=page->getPage()}
+        <!-- //pagination -->
+
+    </div>
+    <!-- //mypage_cont -->
+    <div style="display:none;">
+        <form id="statistics_excel_download_form" action="./excel_ps.php" method="post" target="ifrmProcess">
+            <input type="hidden" name="excel_name"/>
+            <input type="hidden" name="data" />
+        </form>
+    </div>
+</div>
+<!-- //content -->
+
+<script type="text/javascript">
+    $(function(){
+        $(".search_tap_button button[data-tap='{=tap}']").addClass("on");
+        // 2022-06-08 webidas 추가 : 일별, 월별, 부속회원별, 상품별 버튼 클릭 이벤트
+        $(".search_tap_button button").on("click", function() {
+            tap = $(this).data("tap");
+            
+            if ("{=tap}" == tap) {
+                return false;
+            } else {
+                $("input[name='tap']").val(tap);
+                $(".btn_date_check").trigger("click");
+            }
+        });
+        
+        // 2022-06-17 webidas 추가 : 엑셀 다운로드
+        $(".statistics_excel_download").on("click", function() {
+            excelName = "{=tap}_statistics-{=startDate}~{=endDate}";
+//            data = $(".statistics_table").html();
+            
+            // 페이징을 제외한 검색 날짜의 모든 데이터를 불러오기 위해 ajax 처리
+            $.ajax({
+                method: "get",
+                url: "./order_statistics.php?test=y",
+                async: false,
+                data: {
+                    excelDownFl: "y",
+                    tap: "{=tap}",
+                    wDate: [
+                        "{=startDate}",
+                        "{=endDate}",
+                    ],
+                },
+                success: function(res) {
+                    $("input[name='data']").val(res);
+                },
+                error: function(res) {
+                    console.log(res);
+                }
+            });
+            
+            $("input[name='excel_name']").val(excelName);
+//            $("input[name='data']").val(data);
+//            
+            $("#statistics_excel_download_form").submit();
+        });
+        
+        // 일별 인풋박스 선택 이벤트
+        if ($('.js_datepicker').length) {
+            var today = new Date();
+            var minDate = new Date();
+            minDate.setDate(today.getDate() - 365);
+            minDate = new Date(minDate.getFullYear(), minDate.getMonth(), minDate.getDate());
+
+            $('.js_datepicker').datetimepicker({
+                locale: '{=gGlobal.locale}',
+                format: 'YYYY-MM-DD',
+                dayViewHeaderFormat: 'YYYY MM',
+                viewMode: 'days',
+                ignoreReadonly: true,
+                debug: false,
+                keepOpen: false,
+                maxDate: today,
+                minDate: minDate
+            });
+        }
+        
+        // 월별 인풋박스 선택 이벤트
+        if ($('.js_datepicker-months').length) {
+            var today = new Date();
+            var minDate = new Date();
+            minDate.setDate(today.getDate() - 365);
+            minDate = new Date(minDate.getFullYear(), minDate.getMonth(), minDate.getDate());
+
+            $('.js_datepicker-months').datetimepicker({
+                locale: '{=gGlobal.locale}',
+                format: 'YYYY-MM',
+                dayViewHeaderFormat: 'YYYY MM',
+                viewMode: 'days',
+                ignoreReadonly: true,
+                debug: false,
+                keepOpen: false,
+                maxDate: today,
+                minDate: minDate
+            });
+        }
+
+        // 기간버튼 선택 이벤트
+        if ($('.date_check_list').length) {
+            $('.date_check_list button').click(function (e) {
+                $startDate = $endDate = '';
+                $period = $(this).data('value');
+                $elements = $('input[name="' + $(this).closest('.date_check_list').data('target-name') + '"]');
+                $format = $($elements[0]).data('DateTimePicker').format();
+                if ($period >= 0) {
+                    $startDate = moment().hours(0).minutes(0).seconds(0).subtract($period, 'days').format($format);
+                    $endDate = moment().hours(0).minutes(0).seconds(0).format($format);
+                }
+                $($elements[0]).val($startDate);
+                $($elements[1]).val($endDate);
+                $('.date_check_list button').removeClass('on');
+                $(this).addClass('on');
+                $("")
+            });
+
+            // 선택된 버튼에 따른 값 초기화
+            $elements = $('input[name*=\'' + $('.date_check_list').data('target-name') + '\']');
+            $checkDateValue = [0, 7, 15, 30, 90, 365];
+            $today = moment().format('YYYY-MM-DD');
+            if ($elements.length && $elements.val() != '') {
+                $interval = moment($($elements[1]).val()).diff(moment($($elements[0]).val()), 'days');
+                // 선택한 기간이 배열내에 있고 $elements[1]이 검색당일인 경우에만 기간선택 버튼 스타일 적용
+                if (jQuery.inArray($interval, $checkDateValue) != '-1' && $($elements[1]).val() === $today) {
+                    $('.date_check_list').find('button[data-value="' + $interval + '"]').trigger('click');
+                }
+            } else {
+                $('.date_check_list').find('button[data-value="-1"]').trigger('click');
+            }
+        }
+
+        // 조회기간 검증
+        $('form[name="frmDateSearch"]').submit(function(e){
+            $chekcInputDate = $('input[name="wDate[]"]');
+            var startDate = ($($chekcInputDate[0]).val()).split('-');
+            startDate = new Date(startDate[0], startDate[1], startDate[2]);
+            var endDate = ($($chekcInputDate[1]).val()).split('-');
+            endDate = new Date(endDate[0], endDate[1], endDate[2]);
+            
+            if (startDate > endDate) {
+                alert('종료 날짜가 시작 날짜보다 빠릅니다.\n확인 후 검색기간을 다시 선택해주세요.');
+                return false;
+            }
+        });
+    });
+</script>
+
+{ # footer}

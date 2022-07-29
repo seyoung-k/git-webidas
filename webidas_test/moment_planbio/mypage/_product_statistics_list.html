@@ -1,0 +1,70 @@
+{*** 마이페이지 상품별 주문통계리스트 | mypage/_product_statistics_list.html ***}
+<div class="mypage_table_type statistics_table">
+    <table border="1">
+        <colgroup>
+            <col style="width:15%"> <!-- 번호 -->
+            <col style="width:15%"> <!-- 상품명 -->
+            <col style="width:15%"> <!-- 구매수량 -->
+            <col style="width:15%"> <!-- 상품금액 -->
+            <col style="width:15%"> <!-- 할인금액 -->
+            <col style="width:15%"> <!-- 합계 -->
+        </colgroup>
+        <thead>
+        <tr>
+            <th>{=__("번호")}</th>
+            <th>{=__('상품명')}</th>
+            <th>{=__('구매수량')}</th>
+            <th>{=__('상품금액')}</th>
+            <th>{=__('할인금액')}</th>
+            <th>{=__('합계')}</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!--{ ? orderData }-->
+        <!--{ @ orderData }-->
+        <tr>
+            <td>
+                {=.index_+1+((page->page['now']-1)*listCount)}
+            </td>
+            <td class="order_day_num">
+                <!--// 상품명 -->
+                <div>
+                    <!--{ ? excelDownFl != "y" }-->
+                    <span>
+                        <a href="../goods/goods_view.php?goodsNo={=.key_}">{=.goodsImage}</a>
+                    </span>
+                    <div>
+                        <a href="../goods/goods_view.php?goodsNo={=.key_}"><em>{=.goodsNm}</em>
+                    </div>
+                    <!--{ : }-->
+                    {=.goodsNm}
+                    <!--{ / }-->
+                </div>
+            </td>
+            <td>
+                <!--// 구매수량 -->
+                {=.goodsTotalCnt}개
+            </td>
+            <td>
+                <!--// 상품금액 -->
+                {=gd_global_money_format(.goodsPrice)}{=gd_global_currency_string()}
+            </td>
+            <td>
+                <!--// 할인금액 -->
+                {=gd_global_money_format(.totalDcPrice)}{=gd_global_currency_string()}
+            </td>
+            <td>
+                <!--// 합계 -->
+                {=gd_global_money_format(.totalGoodsPrice)}{=gd_global_currency_string()}
+            </td>
+        </tr>
+        <!--{ / }-->
+        <!--{ : }-->
+        <tr>
+            <td colspan="6"><p class="no_data">{=__('조회내역이 없습니다.')}</p></td>
+        </tr>
+        <!--{ / }-->
+        </tbody>
+    </table>
+</div>
