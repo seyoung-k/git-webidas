@@ -1,0 +1,67 @@
+{*** [위젯] 레이어형 상단 카테고리 | proc/category_top.html ***}
+
+<div class="gnb_left"><a href="#PREV" class="active">PREV</a></div>
+<div class="gnb_menu_box">
+    <ul class="depth0 gnb_menu0">
+        <!--{ @ data }-->
+        <li <!--{ ? .divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+            <!--{ ? .divisionFl =='n' }-->
+            <a href="../goods/goods_list.php?{cateType}Cd={.cateCd}" >{.cateNm}</a>
+            <!--{ : }-->
+            {.cateNm}
+            <!--{ / }-->
+            <!--{ ? .children }-->
+            <ul class="depth1">
+                <!--{ @ .children }-->
+                <li <!--{ ? ..divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                    <!--{ ? ..divisionFl =='n' }-->
+                    <a href="../goods/goods_list.php?{cateType}Cd={..cateCd}" >{..cateNm}</a>
+                    <!--{ : }-->
+                    {..cateNm}
+                    <!--{ / }-->
+                    <!--{ ? ..children }-->
+                    <ul class="depth2">
+                        <!--{ @ ..children }-->
+                        <li <!--{ ? ...divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                            <!--{ ? ...divisionFl =='n' }-->
+                            <a href="../goods/goods_list.php?{cateType}Cd={...cateCd}" >{...cateNm}</a>
+                            <!--{ : }-->
+                            {...cateNm}
+                            <!--{ / }-->
+                            <!--{ ? ...children }-->
+                            <ul class="depth3">
+                                <!--{ @ ...children }-->
+                                <li <!--{ ? ....divisionFl =='y' }--> class='group_tit'<!--{ / }-->>
+                                <!--{ ? ....divisionFl =='n' }-->
+                                <a href="../goods/goods_list.php?{cateType}Cd={....cateCd}" >{....cateNm}</a>
+                                <!--{ : }-->
+                                {....cateNm}
+                                <!--{ / }-->
+                                </li>
+                                <!--{ / }-->
+                            </ul>
+                            <!--{ / }-->
+                        </li>
+                        <!--{ / }-->
+                    </ul>
+                    <!--{ / }-->
+                </li>
+                <!--{ / }-->
+            </ul>
+            <!--{ / }-->
+        </li>
+        <!--{ / }-->
+        <li>
+            <a href="../goods/goods_list.php?cateCd=007" >의료 및 수술기구</a>
+        </li>
+        <li>
+            <a href="../goods/goods_list.php?cateCd=002" >미용성형 제품</a>
+        </li>
+		<li class='group_tit'>
+			<a href="../service/notice.php" >공지사항</a>
+			<a href="../board/list.php?bdId=PLANDOCS" >제품요청</a>
+		</li>
+		
+    </ul>
+</div>
+<div class="gnb_right"><a href="#NEXT">NEXT</a></div>
