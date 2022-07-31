@@ -2,21 +2,45 @@
 { # header }
 <div class="content_box">
 	<div class="member_wrap">
-		<div class="member_tit">
+		<div class="board_zone_tit">
 			<h2>{=__('아이디찾기')}</h2>
+			<div class="caption">회원 가입시 등록한 정보로 찾을 수 있습니다. </div>
 		</div>
 		<!-- //member_tit -->
 		<div class="member_cont">
 			<form id="formFindId" method="post" action="../member/member_ps.php">
 				<div class="find_id_box">
 					<div class="find_id_sec">
-						<h3>{=__('회원 아이디찾기')}</h3>
+						<!-- <h3>{=__('회원 아이디찾기')}</h3> -->
 						<div class="form_element radio_find_type">
 							<input type="radio" id="findIdEmail" name="findIdFl" value="email" checked="checked"/>
 							<label for="findIdEmail" class="choice_s on" >{=__('이메일')}</label>
 							<input type="radio" id="findIdPhone" name="findIdFl" value="cellPhone"/>
 							<label for="findIdPhone" class="choice_s" >{=__('휴대폰번호')}</label>
 						</div>
+						<div class="login-area">
+							<div class="flex">
+								<input type="text" id="userName" name="userName" placeholder="{=__('이름')}"/>
+							</div>
+							<div class="flex">
+								<!--{ ? gGlobal.isFront }-->
+								{=gd_select_box('cellPhoneCountryCode', 'cellPhoneCountryCode', countryPhone, null, null, __('국가코드'), 'style="width:120px; height:36px; margin-top:5px; border:1px solid #d0d0d0; display:none;"')}
+								<!--{ / }-->
+								<input type="text" id="userCellPhoneNum" name="userCellPhoneNum" placeholder="{=__('가입휴대폰번호')}" disabled="disabled" style="display:none;<!--{ ? gGlobal.isFront }-->width:170px; margin-top:5px; float: right;<!--{ / }-->" maxlength="12"/>
+								<input type="text" id="userEmail" name="userEmail" class="input_email" placeholder="{=__('가입메일주소')}"/>
+								<select id="emailDomain" name="emailDomain" class="email_select">
+									<!--{@ emailDomain}-->
+									<option value="{.key_}">{.value_}</option>
+									<!--{/}-->
+								</select>
+							</div>							
+							<div class="flex">
+								<button type="submit" class="button-l bg-active">{=__('아이디 찾기')}</button>
+							</div>
+							<p class="dn js_caution_msg1">{=__('일치하는 회원정보가 없습니다. 다시 입력해 주세요.')}</p>
+						</div>												
+						
+						{* 
 						<div class="login_input">
 							<div>
 								<input type="text" id="userName" name="userName" placeholder="{=__('이름')}"/>
@@ -32,14 +56,15 @@
 								</select>
 							</div>
 							<button type="submit" class="btn_member_id">{=__('아이디 찾기')}</button>
-						</div>
+						</div>						
 						<p class="dn js_caution_msg1">{=__('일치하는 회원정보가 없습니다. 다시 입력해 주세요.')}</p>
+						*}
 					</div>
 					<!-- //find_id_sec -->
 					<div class="btn_member_sec">
 						<ul>
-							<li><button class="btn_member_white js_btn_find_password">{=__('비밀번호 찾기')}</button></li>
-							<li><button class="btn_comfirm js_btn_login">{=__('로그인하기')}</button></li>
+							<li><button class="js_btn_find_password">{=__('비밀번호 찾기')}</button></li>
+							<li><button class="js_btn_login">{=__('로그인하기')}</button></li>
 						</ul>
 					</div>
 					<!-- //btn_member_sec -->
