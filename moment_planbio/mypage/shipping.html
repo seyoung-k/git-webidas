@@ -10,7 +10,7 @@
 
         <div class="mypage_shipping js_delivery_layer">
             <div class="mypage_zone_tit">
-                <h3>{=__('배송지 관리.')}</h3>
+                <h3>{=__('배송지 관리')}</h3>
 				<span class="pick_list_num">{=__('배송지 관리 내역 총')} <strong>{page->recode['total']}</strong>{=__('건')}</span></span>
             </div>
 
@@ -38,7 +38,7 @@
                         <!--{ ? shippingList }-->
                         <!--{@ shippingList}-->
                         <tr data-shipping-name="{.shippingTitle}">
-                            <td><!--{ ? .defaultFl == 'y' }--><span>({=__('기본배송지')})</span><!--{ / }--><strong>{.shippingTitle}</strong></td>
+                            <td><!--{ ? .defaultFl == 'y' }--><span class="button-s col-active f14">{=__('기본배송지')}</span><!--{ / }--><strong>{.shippingTitle}</strong></td>
                             <td>{.shippingName}</td>
                             <td class="td_left">
                                 <!--{ ? gGlobal.isFront }-->
@@ -49,8 +49,8 @@
                             </td>
                             <td class="td_phone"><span>{=__('전화번호')} : <!--{ ? gGlobal.isFront }-->(+{.shippingPhonePrefix}) <!--{ / }-->{.shippingPhone}</span><span>{=__('휴대폰')} : <!--{ ? gGlobal.isFront }-->(+{.shippingCellPhonePrefix}) <!--{ / }-->{.shippingCellPhone}</span></td>
                             <td>
-                                <span class="btn_gray_list"><a href="#lyDeliveryAdd" class="btn_gray_small btn_open_layer" data-sno="{.sno}"><span>{=__('수정')}</span></a></span>
-                                <span class="btn_gray_list"><a href="#" class="btn_gray_small js_delete" data-sno="{.sno}" data-default-fl="{=.defaultFl}"><span>{=__('삭제')}</span></a></span>
+                                <span class="btn_gray_list"><a href="#lyDeliveryAdd" class="button-s btn_open_layer" data-sno="{.sno}"><span>{=__('수정')}</span></a></span>
+                                <span class="btn_gray_list"><a href="#" class="button-s js_delete" data-sno="{.sno}" data-default-fl="{=.defaultFl}"><span>{=__('삭제')}</span></a></span>
                             </td>
                         </tr>
                         <!--{ / }-->
