@@ -19,21 +19,23 @@
 	</div>
 	<!--{/}-->
 
-    <!-- 게시판 서브메뉴  -->
+    <!-- 게시판 서브메뉴 -->
+    <!--{ ? bdList.cfg.bdId == 'notice' || bdList.cfg.bdId == 'qa' || bdList.cfg.bdNm == 'FAQ' || bdList.cfg.bdId == 'PLANDOCS' }-->
     <ul class="board_sub_menu">
-        <li <!--{ ? bdList.cfg.bdNm == '공지사항'}--> class="on" <!--{/}--> >
+        <li <!--{ ? bdList.cfg.bdId == 'notice'}--> class="on" <!--{/}--> >
             <a href="../board/list.php?bdId=notice">{=__('공지사항')}</a>
         </li>
-        <li <!--{ ? bdList.cfg.bdNm == '1:1문의'}--> class="on" <!--{/}--> >
+        <li <!--{ ? bdList.cfg.bdId == 'qa'}--> class="on" <!--{/}--> >
             <a href="../board/list.php?bdId=qa">{=__('1:1문의')}</a>
         </li>
         <li <!--{ ? bdList.cfg.bdNm == 'FAQ'}--> class="on" <!--{/}--> >
             <a href="../service/faq.php">FAQ</a>
         </li>
-		<li <!--{ ? bdList.cfg.bdNm == '제품요청'}--> class="on" <!--{/}--> >
+		<li <!--{ ? bdList.cfg.bdId == 'PLANDOCS'}--> class="on" <!--{/}--> >
             <a href="../board/list.php?bdId=PLANDOCS">제품요청</a>
         </li>
     </ul>
+    <!--{/}-->
     
 	<div class="board_zone_cont">
 		<div class="board_zone_list">

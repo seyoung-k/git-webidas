@@ -84,7 +84,7 @@ select{height:31px; color:#222; vertical-align:top; outline:none;}
 
 
 /* 체크박스 라디오버튼 스타일 */
-.form_element{display:inline-block; overflow:hidden; position:relative;}
+.form_element{display:inline-block; overflow:hidden; position:relative; vertical-align: middle;}
 span.form_element{display:inline-block;}
 .form_element label{
     cursor: pointer;

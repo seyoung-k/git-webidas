@@ -4,7 +4,7 @@
 .order_zone_tit{margin:0 0 0 0; padding:0 0 10px 0; font-size:16px;}
 .order_zone_tit h3{font-size:16px;}
 .order_zone_tit h4{font-size:16px;}
-.order_zone_tit span{padding:0 0 0 10px; color:#777777; font-size:12px; font-weight:normal;}
+.order_zone_tit span{padding:0 0 0 10px; color:#777777; font-size:15px; font-weight:normal;}
 
 
 .order_table_type + .btn_left_box{margin:10px 0 30px 0;}
@@ -34,8 +34,8 @@
 .order_table_type .row_line td{border-bottom:1px solid #ebebeb;}
 .order_table_type table td.order_day_num{border-right:1px dotted #ededed; border-bottom:1px solid #dbdbdb;}/* 날짜/주문번호 */
 .order_table_type .btn_claim > span{display:inline-block; margin:7px 0 0 0;}
-.order_table_type .order_sum_txt{font-size:13px;}
-.order_table_type .time_sale_cost{display:inline-block; padding:7px 0 5px 20px; font-size:13px; background:url('../../img/icon/goods_icon/icon_time_sale_cost.png') no-repeat left 10px;}
+.order_table_type .order_sum_txt{font-size:15px;}
+.order_table_type .time_sale_cost{display:inline-block; padding:7px 0 5px 20px; font-size:15px; background:url('../../img/icon/goods_icon/icon_time_sale_cost.png') no-repeat left 10px;}
 .order_table_type .pick_add_cont .pick_add_info .normal_btn em{font-weight:normal;}
 
 /* left type */
@@ -96,13 +96,13 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .order_table_type .pick_add_cont .pick_option_box{width:100%; padding:2px 0 0 0;}
 .order_table_type .pick_add_cont .pick_option_box .btn_gray_list{margin:5px 0 0 0;}
 /* 체크박스 */
-.order_table_type thead .form_element, .order_table_type .td_chk .form_element{height:18px; }
+/* .order_table_type thead .form_element, .order_table_type .td_chk .form_element{height:18px; } */
 .order_table_type .form_element label.check_s{padding: 0 0 0 5px;}
 .order_table_type .td_chk{vertical-align:middle;}
 /* 수량 */
 .order_table_type .td_order_amount{border-left:1px solid #eee; border-right:1px solid #eee;}
 .order_table_type .td_order_amount .order_goods_num{width:100%;}
-.order_table_type .td_order_amount .order_goods_num strong{display:block; width:100px; color:#333333; font-size:13px;}
+.order_table_type .td_order_amount .order_goods_num strong{display:block; color:#333333; font-size:15px;}
 .order_table_type .td_order_amount input{width:49px; height:26px; text-align:center;}
 .order_table_type .td_order_amount .btn_gray_list{margin:5px 0 0 0; display:inline-block;}
 /* 배송비 */
@@ -163,16 +163,16 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .order_freebie .order_zone_tit{margin:50px 0 0 0; border-bottom:1px solid #717171;}
 .order_freebie_list{}
 .order_freebie_list dl{font-size:0; vertical-align:top; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb;}
-.order_freebie_list dt{display:inline-block; width:150px; padding:20px 10px 10px 0; font-size:12px; vertical-align:top; text-align:center;}
+.order_freebie_list dt{display:inline-block; width:150px; padding:20px 10px 10px 0; font-size:15px; vertical-align:top; text-align:center;}
 .order_freebie_list dt span{display:block;}
-.order_freebie_list dd{display:inline-block; width:auto; padding:0 0 0 20px; font-size:12px; border-left:1px solid #dbdbdb;}
+.order_freebie_list dd{display:inline-block; width:auto; padding:0 0 0 20px; font-size:15px; border-left:1px solid #dbdbdb;}
 .order_freebie_list dd .form_element{display:inline-block; border-top:none 0;}
 .order_freebie_list dd .form_element ul{width:auto;}
 .order_freebie_list dl + dl{margin-top:-1px;}
 /* 사은품 상품 리스트 */
 .order_freebie_list .form_element{display:block; padding:10px 0 0 0; border-top:1px solid #dbdbdb;}
 .order_freebie_list ul{display:inline-block; width:100%; font-size:0; /*border-bottom:1px solid #dbdbdb;*/}
-.order_freebie_list ul li{display:inline-block; width:100px; padding:0 20px 20px 0; font-size:12px; vertical-align:top;}
+.order_freebie_list ul li{display:inline-block; width:100px; padding:0 20px 20px 0; font-size:15px; vertical-align:top;}
 .order_freebie_list ul li b{display:block; overflow:hidden; width:78px; height:78px; border:1px solid #ffffff; cursor:default;}
 .order_freebie_list ul li b img{width:76px; height:76px; border:1px solid #dbdbdb;}
 .order_freebie_list ul li em{display:block; padding:5px 0 0 0;}
@@ -243,15 +243,15 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 
 /* --------- 결제수단 선택/결제 --------- */
 .payment_progress{}
-.payment_progress .order_zone_tit > p{padding:2px 0 0 0; color:#1e1e47; font-size:12px;}
+.payment_progress .order_zone_tit > p{padding:2px 0 0 0; color:#1e1e47; font-size:15px;}
 .payment_progress_list{padding:10px 0 10px 0; border-top:1px solid #999999;}
 .payment_progress_list dl{display:block; padding:20px 0 15px 0; font-size:0; border-bottom:1px solid #dbdbdb; vertical-align:top;}
-.payment_progress_list dt{display:inline-block; width:180px; padding:0 0 0 24px; font-size:13px; font-weight:bold; vertical-align:top}
-.payment_progress_list dd{display:inline-block; font-size:12px;}
+.payment_progress_list dt{display:inline-block; width:180px; padding:0 0 0 24px; font-size:15px; font-weight:bold; vertical-align:top}
+.payment_progress_list dd{display:inline-block; font-size:15px;}
 .payment_progress_cont{}
 /* 라디오 버튼  선택 */
 .payment_progress .payment_progress_select{font-size:0;}
-.payment_progress .payment_progress_select li{display:inline-block; margin:0 30px 0 0; font-size:12px;}
+.payment_progress .payment_progress_select li{display:inline-block; margin:0 30px 0 0; font-size:15px;}
 
 /* ----- 페이코결제 ----- */
 .payco_payment{margin-top:-10px;}
@@ -305,8 +305,8 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .cash_receipt_box .form_element{display:block;}
 .cash_receipt_box .payment_progress_select{display:block; padding:0 0 20px 24px; font-size:0; border-bottom:1px dotted #dbdbdb;}
 .cash_receipt_box .cash_receipt_list dl{display:block; padding:20px 0 0 0; font-size:0; border-bottom:none 0;}
-.cash_receipt_box .cash_receipt_list dt{display:inline-block; width:117px; padding:5px 0 0 24px; font-size:12px; font-weight:bold;}
-.cash_receipt_box .cash_receipt_list dd{display:inline-block; font-size:12px;}
+.cash_receipt_box .cash_receipt_list dt{display:inline-block; width:117px; padding:5px 0 0 24px; font-size:15px; font-weight:bold;}
+.cash_receipt_box .cash_receipt_list dd{display:inline-block; font-size:15px;}
 /* 세금계산서 */
 .tax_invoice_box {padding:20px 0 20px 0; border-bottom:1px solid #dbdbdb;}
 .tax_invoice_box .order_table_type{}
@@ -335,7 +335,7 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .order_end .order_table_type{margin:0 0 50px 0;}
 /* 결제수단 */
 .pay_with_list{color:#333333;}
-.pay_with_list > strong{display:block; font-size:13px;}
+.pay_with_list > strong{display:block; font-size:15px;}
 .pay_with_list ul{margin:5px 0 0 0;}
 .pay_with_list ul li{display:block; padding:2px 0 2px 0;}
 .pay_with_list .deposit_money{}

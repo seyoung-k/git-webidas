@@ -44,18 +44,6 @@
 
                     <div class="order_table_type">
                         <table>
-                            <colgroup>
-                                <col style="width:3%">  <!-- 체크박스 -->
-                                <col>					<!-- 상품명/옵션 -->
-                                <col style="width:5%">  <!-- 수량 -->
-                                <col style="width:10%"> <!-- 상품금액 -->
-                                <col style="width:13%"> <!-- 할인/적립 -->
-                                <col style="width:10%"> <!-- 2022-05-18 webidas 추가 : 부속회원 주문자명 추가 -->
-                                <col style="width:10%"> <!-- 합계금액 -->
-                                <!--{ ? !gGlobal.isFront && display }-->
-                                <col style="width:10%"> <!-- 배송비 -->
-                                <!--{ / }-->
-                            </colgroup>
                             <thead>
                             <tr>
                                 <th>
@@ -205,7 +193,7 @@
                                     <div class="order_goods_num">
                                         <strong>{=...goodsCnt}{=__('개')}</strong>
                                         <div class="btn_gray_list">
-                                            <a href="#optionViewLayer" class="btn_gray_small btn_open_layer" <!--{ ? ...memberCouponNo }--> data-coupon='use' <!--{ : }--> data-goodsno="{...goodsNo}" data-sno="{...sno}"  <!--{ / }-->><span>{=__('옵션/수량변경')}</span></a>
+                                            <a href="#optionViewLayer" class="button-s btn_open_layer" <!--{ ? ...memberCouponNo }--> data-coupon='use' <!--{ : }--> data-goodsno="{...goodsNo}" data-sno="{...sno}"  <!--{ / }-->><span>{=__('옵션/수량변경')}</span></a>
                                         </div>
                                     </div>
                                 </td>

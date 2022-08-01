@@ -451,3 +451,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .sub_search_box .quick_btn {padding:0;}
 .sub_search_box .quick_btn input {padding:0; width:100%;}
 
+/* 장바구니 */
+.order_table_type th {background:#fff; height:55px; font-weight:400; color:#222;}
+.order_table_type td {height:45px; border-left:none !important; border-right:none !important;}
+.order_table_type .pick_add_cont .pick_add_img {padding-right:15px;}
+.order_table_type .pick_add_cont .pick_add_img img {width:100px; height:100px; border-radius: 20px;}
