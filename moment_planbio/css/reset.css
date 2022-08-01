@@ -11,7 +11,7 @@ input,select,textarea,button {vertical-align:middle}
 button {border:0 none;background-color:transparent;cursor:pointer}
 body {background:#fff}
 /* 220420 요청사항으로 인해 폰트 사이즈 12 > 15px로 변경 */
-body,th,td,input,select,textarea,button {font-size:11px;line-height:1.5;font-family:"Noto Sans KR", Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;color:#222} /* color값은 디자인가이드에 맞게사용 */
+body,th,td,input,select,textarea,button {font-size:15px;line-height:1.5;font-family:"Noto Sans KR", Malgun Gothic,"맑은 고딕",AppleGothic,Dotum,"돋움",sans-serif;color:#222} /* color값은 디자인가이드에 맞게사용 */
 a {color:#333;text-decoration:none}
 a:active, a:hover {text-decoration:none;}
 address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}

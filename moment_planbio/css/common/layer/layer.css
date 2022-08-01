@@ -99,7 +99,7 @@
 .sys_pop .box .close{display:block; position:absolute; top:6px; right:0; width:18px; height:18px; text-indent:-9999px; background:url('../../../img/btn/layer-close.png') no-repeat left top;}
 .sys_pop .box .view{border:1px solid #dbdbdb;}
 .sys_pop .box .check{padding:9px 10px 9px 0; text-align:right;}
-.sys_pop .box .check label{padding:0 22px 0 0; background-position:right 2px; font-size:11px; color:#7c7c7c;}
+.sys_pop .box .check label{padding: 0 32px 0 0; background-position:right 2px;font-size: 15px; color:#7c7c7c;line-height: 24px;min-width: 24px;min-height: 22px;}
 .sys_pop .box .check input{left:auto; right:1px; top:1px;}
 /* 시스템 팝업 끝 */
 

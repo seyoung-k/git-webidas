@@ -17,7 +17,10 @@ select:focus {border:1px solid #222;}
 .chosen-container-active.chosen-with-drop .chosen-single div b {background-position:-18px 10px;}
 
 
-input[type="text"], input[type="password"], input[type="file"] {height:45px; font-size:15px; border-radius: 5px; padding-left:20px; border:1px solid #dddddd;}
+input[type="text"], 
+input[type="password"], 
+input[type="file"] 
+{height:45px; font-size:15px; border-radius: 5px; padding-left:20px; border:1px solid #dddddd;}
 input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus {border:1px solid #222;}
 
 
@@ -291,7 +294,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .body-faq .date_check_box .date_faq_txt .btn {display:inline-block; margin-left:20px; height:40px; line-height:40px; padding: 0 20px; min-width:60px;background:#380f93; border-radius: 5px; font-size:15px; color:#fff;}
 .board_list_faq .board_hot_list {border:none;}
 .board_list_faq .board_hot_list ul li {margin-right: 5px;}
-.board_list_faq .board_hot_list ul li a { border:none; height: auto; padding:0 20px;}
+.board_list_faq .board_hot_list ul li a { border:none; background:#f2f2f2; height: auto; padding:0 20px;}
 .board_list_faq .board_hot_list ul li a:hover { text-decoration: none;}
 .board_list_faq .board_hot_list ul li.on a {background: #380f93; color:#fff;}
 .board_list_faq .board_hot_list ul li a span {position: inherit;}
@@ -426,3 +429,4 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .find_id_box .btn_member_sec li:last-child:after {display: none;}
 .find_id_box .btn_member_sec li button {font-size:16px;}
 .find_password_box .login_input {border:none;}
+.find_id_box .radio_find_type label {margin-right:25px;}

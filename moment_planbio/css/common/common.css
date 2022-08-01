@@ -5,7 +5,8 @@ audio{position:absolute;left:0;bottom:0}
 .skip{overflow:hidden;position:absolute;top:-999em;left:-999em;width:1px;height:1px;background:url("../../img/common/bg/bg_skip.gif") repeat}
 
 input[type="text"],
-input[type="password"]{height:31px; padding:0 5px; color:#333333; border:1px solid #d6d6d6; line-height:31px;
+input[type="password"]{
+    height:45px; padding:0 5px; color:#222; border:1px solid #ddd; line-height:45px;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
@@ -19,7 +20,7 @@ textarea:-ms-input-placeholder,
 textarea::-webkit-input-placeholder,
 textarea::-moz-placeholder{color:#cccccc;}
 
-textarea{padding:5px; color:#a9a9a9; border:1px solid #d6d6d6;
+textarea{padding:5px; color:#222; border:1px solid #ddd;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
@@ -39,7 +40,7 @@ textarea{padding:5px; color:#a9a9a9; border:1px solid #d6d6d6;
 
 input[type="radio"]{width:13px; height:13px; vertical-align:top;}
 input[type="text"],
-input[type="password"]{padding:0 10px;outline:none;font-size:12px;}
+input[type="password"]{padding:0 10px;outline:none;font-size:15px;}
 input[type="checkbox"]{width:13px;height:13px;vertical-align:top;}
 input[type="image"]{vertical-align:top;border:none;cursor:pointer;}
 input[type="button"]{border:none;background:none;cursor:pointer;}
@@ -59,12 +60,12 @@ input[type="submit"]{cursor:pointer;vertical-align:top;font-size:100%;}
 .file_upload_sec .link_file_down:hover{text-decoration:underline;}
 
 /* 셀렉트박스 */
-select{height:31px; color:#717171; vertical-align:top; outline:none;}
+select{height:31px; color:#222; vertical-align:top; outline:none;}
 #wrap .chosen-container{vertical-align:top; text-align:left;}
-#wrap .chosen-single{height:31px; color:#717171; vertical-align:top; outline:none; border:1px solid #cccccc;}
-#wrap .chosen-single > span{line-height:30px;}
+#wrap .chosen-single{height:45px; color:#222; vertical-align:top; outline:none; border:1px solid #ddd;}
+#wrap .chosen-single > span{line-height:45px;}
 #wrap .chosen-container .chosen-results li{float:none;}
-#wrap .chosen-container .chosen-drop{border:1px solid #cccccc; border-top:none 0;}
+#wrap .chosen-container .chosen-drop{border:1px solid #ddd; border-top:none 0;}
 #wrap .chosen-container .chosen-results li.active-result{text-align:left;}
 #wrap .chosen-container .chosen-results li.disabled-result{text-align:left;}
 
@@ -77,27 +78,43 @@ select{height:31px; color:#717171; vertical-align:top; outline:none;}
 
 /* 레이어팝업 셀렉트 박스 */
 .layer_wrap .chosen-container{vertical-align:top;}
-.layer_wrap .chosen-container .chosen-single{height:31px; color:#717171; vertical-align:top; outline:none; border:1px solid #cccccc;}
-.layer_wrap .chosen-container .chosen-single > span{line-height:30px;}
+.layer_wrap .chosen-container .chosen-single{height:45px; color:#222; vertical-align:top; outline:none; border:1px solid #ddd;}
+.layer_wrap .chosen-container .chosen-single > span{line-height:45px;}
 .layer_wrap .chosen-container .chosen-results li{float:none;}
 
 
 /* 체크박스 라디오버튼 스타일 */
 .form_element{display:inline-block; overflow:hidden; position:relative;}
 span.form_element{display:inline-block;}
-.form_element label{position:relative;top:0;left:0;display:inline-block;min-width:20px;min-height:20px;padding:0 0 0 27px;background:url('../../img/common/input/check_off.png') no-repeat 1px top;}
+.form_element label{
+    cursor: pointer;
+    position:relative;
+    top:0;left:0;
+    display:inline-block;
+    min-width:22px;
+    min-height:22px;
+    line-height: 22px;
+    padding:0 0 0 32px;
+    background:url('../../img/common/input/check_off.png') no-repeat 1px top;
+}
 .form_element label:hover{background:url('../../img/common/input/check_over.png') no-repeat 1px top;}
 .form_element label.on{background:url('../../img/common/input/check_on.png') no-repeat 1px top;}
 .form_element label.choice{background:url('../../img/common/input/radio_off.png') no-repeat 1px 50%;}
 .form_element label.choice:hover{background:url('../../img/common/input/radio_over.png') no-repeat 1px 50%;}
 .form_element label.choice.on{background:url('../../img/common/input/radio_on.png') no-repeat 1px 50%;}
-.form_element label.check_s{min-width:13px;padding:0 0 0 22px;background:url('../../img/common/input/check_off_small.png') no-repeat 1px 2px;}
-.form_element label.check_s:hover{background:url('../../img/common/input/check_over_small.png') no-repeat 1px 2px;}
-.form_element label.check_s.on{background:url('../../img/common/input/check_on_small.png') no-repeat 1px 2px;}
-.form_element label.choice_s{min-width:13px;padding:0 0 0 22px;background:url('../../img/common/input/radio_off_small.png') no-repeat 1px 50%;}
+.form_element label.check_s{
+    background:url('../../img/common/input/check_off.png') no-repeat 1px top;
+}
+.form_element label.check_s:hover{background:url('../../img/common/input/check_over_small.png') no-repeat 1px top;}
+.form_element label.check_s.on{background:url('../../img/common/input/check_on_small.png') no-repeat 1px top;}
+.form_element label.choice_s{
+    background:url('../../img/common/input/radio_off_small.png') no-repeat 1px 50%;
+}
 .form_element label.choice_s:hover{background:url('../../img/common/input/radio_over_small.png') no-repeat 1px 50%;}
 .form_element label.choice_s.on{background:url('../../img/common/input/radio_on_small.png') no-repeat 1px 50%;}
-.form_element label.single{width:21px;height:21px;padding:1px 0 0;background-color:transparent;text-indent:-9999px;}
+.form_element label.single{
+    width:22px;height:22px;padding:1px 0 0;background-color:transparent;text-indent:-9999px;
+}
 .form_element label.single:hover{background-color:transparent;}
 .form_element label span{color:#979797;}
 .form_element label img{vertical-align:middle;}
@@ -300,9 +317,11 @@ span.form_element{display:inline-block;}
 
 .intro_member_wrap .member_login .id_chk span{display:inline-block;}
 .intro_member_wrap .member_login .id_chk input{display:none;}
-.intro_member_wrap .member_login .id_chk label{font-size:12px; padding-left:23px; cursor:pointer; background:url('../../img/icon/goods_icon/icon_check_off.png') no-repeat left center;}
-.intro_member_wrap .member_login .id_chk label:hover{background:url('../../img/icon/goods_icon/icon_check_hover.png') no-repeat left center;}
-.intro_member_wrap .member_login .id_chk label.active{background:url('../../img/icon/goods_icon/icon_check_active.png') no-repeat left center;}
+.intro_member_wrap .member_login .id_chk label{position:relative;top:0;left:0;display:inline-block;min-width:22px;min-height:22px;padding:0 0 0 32px;background:url('../../img/common/input/check_off.png') no-repeat 1px top;}
+.intro_member_wrap .member_login .id_chk label:hover{background:url('../../img/common/input/check_over.png') no-repeat 1px top;}
+.intro_member_wrap .member_login .id_chk label.active{background:url('../../img/common/input/check_on.png') no-repeat 1px top;}
+
+
 
 .intro_member_wrap.new_intro .member_login_cont { width:1300px; }
 .intro_member_wrap.new_intro .member_login_box { display:flex; justify-content:space-between;  padding:0; margin:0; border:none; }
