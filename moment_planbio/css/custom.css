@@ -430,3 +430,24 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .find_id_box .btn_member_sec li button {font-size:16px;}
 .find_password_box .login_input {border:none;}
 .find_id_box .radio_find_type label {margin-right:25px;}
+
+/* 검색페이지 */
+.goods-search-box-area .goods_search_box {border:none;}
+.body-goods-search .sub_content {padding-top:380px;}
+.body-goods-search #contents .sub_content > .side_cont + .content {padding-top:40px;}
+.search_text_result {font-size:30px; font-weight:400; padding:0;}
+.search_text_result span {color:#380f93;}
+.goods-search-box-area { position:absolute; left:0; top:50px; width:1200px; text-align: center; background: #f2f2f2; border:1px solid #ddd; padding:50px 0 10px;}
+#wrap .search_again_box .chosen-single {height:50px; border-radius: 10px; border:none;}
+#wrap .search_again_box .chosen-single > span {line-height:50px;}
+.search_again_box .keyword-div {position:relative;}
+.search_again_box .keyword_input {width:430px; height:50px; line-height:50px; border-radius: 10px;; border:none; margin:0 20px 0 10px;}
+.btn_goods_search {position:absolute; right:20px; top:0px; width:60px; min-width:auto; height:50px;background:url(../img/new/icon_search.png) center / 45px no-repeat;font-size:0; border:none;}
+.sub_search_box dl dt {background:none; font-size:22px; font-weight:400; color:#222; padding-bottom:5px; margin-bottom:10px; box-sizing : border-box;}
+.sub_search_box dl dd .select_box {margin-bottom:10px;}
+.sub_search_box .benefit_box span {width:100%;}
+.sub_search_box .price_box input {width:172px; margin:0 5px 10px 0;}
+.sub_search_box .price_box span {line-height: 45px;}
+.sub_search_box .quick_btn {padding:0;}
+.sub_search_box .quick_btn input {padding:0; width:100%;}
+

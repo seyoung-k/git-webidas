@@ -18,13 +18,13 @@
             </dl>
             <!--{ / }-->
             <!--{ ?  in_array('brand',goodsConfig.searchType)  && goodsData.listSearch.brandSearchList && paycosearchUse == false }-->
-            <dl>
+            <dl style="display:none;">
                 <dt>{=__('브랜드')}</dt>
                 <dd>
                     <div class="benefit_box">
                         <!--{ @ goodsData.listSearch.brandSearchList }-->
                         <!--{ ?  .brandNm && .brandCnt }-->
-                        <span>
+                        <span class="form_element">
                             <input type="checkbox" id="brand_{.brandCd}" name="brand[]" value="{.brandCd}" <!--{ ?  is_array(search.brand) && in_array(.brandCd,search.brand) }--> checked='checked'   <!--{ / }-->  <!--{ ?  .disabledFl }--> disabled='disabled'<!--{ / }-->>
                             <label for="brand_{.brandCd}" class="<!--{ ?  is_array(search.brand) && in_array(.brandCd,search.brand) }--> on <!--{ / }-->" title="">{.brandNm} ({.brandCnt})</label>
                         </span>
@@ -41,13 +41,13 @@
                 <dd>
                     <div class="benefit_box">
                         <!--{ ?  in_array('delivery',goodsConfig.searchType)   }-->
-                        <span>
+                        <span class="form_element">
                             <input type="checkbox" id="freeDelivery" name="freeDelivery" value="y" <!--{ ? search.freeDelivery == 'y'  }--> checked='checked'   <!--{ / }-->>
                             <label for="freeDelivery" class="<!--{ ? search.freeDelivery == 'y'  }--> on   <!--{ / }-->" title="{=__('무료배송')}">{=__('무료배송')}</label>
                         </span>
                         <!--{ / }-->
                         <!--{ ?  in_array('regdt',goodsConfig.searchType)  }-->
-                        <span>
+                        <span class="form_element">
                             <input type="checkbox" id="newGoods" name="newGoods" value="y" <!--{ ? search.newGoods == 'y'  }--> checked='checked'   <!--{ / }-->>
                             <label for="newGoods" class="<!--{ ? search.newGoods == 'y'  }--> on <!--{ / }-->" title="{=__('최근등록상품')}">{=__('최근등록상품')}</label>
                         </span>
@@ -57,7 +57,7 @@
             </dl>
             <!--{ / }-->
             <!--{ ?  in_array('color',goodsConfig.searchType) && paycosearchUse == false }-->
-            <dl>
+            <dl style="display:none;">
                 <dt>{=__('색상')}</dt>
                 <dd>
                     <div class="color_box">
@@ -99,7 +99,7 @@
                 </dd>
             </dl>
             <!--{ / }-->
-            <div class="quick_btn"><input type="button" id="btnSearchSubmit" value="{=__('검색')}"></div>
+            <div class="quick_btn"><input type="button" class="button-l bg-active" id="btnSearchSubmit" value="{=__('검색하기')}"></div>
         </fieldset>
     </form>
 </div>

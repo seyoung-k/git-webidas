@@ -1,7 +1,7 @@
 {*** 상품검색화면 | goods/goods_search.php ***}
 { # header }
 <div class="content">
-    <div class="goods_search_cont">
+    <div class="goods-search-box-area">
         <strong class="search_text_result">
             <span>&quot;{=gd_htmlspecialchars_slashes(goodsData.listSearch['keyword'])}&quot;</span> {=__('검색결과')} {=number_format(gd_isset(page->recode['total']))}{=__('개')}
             <!--{ ? paycosearchUse }-->
@@ -21,11 +21,7 @@
                 <input type=hidden name=pageNum value="{pageNum}"/>
 
                 <!--{ ?  in_array('keyword',goodsConfig.searchType) }-->
-                <div class="search_again_box">
-                    <div class="form_element">
-                        <input type="checkbox" id="rescan" class="checkbox" name="reSearch" value="y" <!--{ ?  goodsData.listSearch['reSearch'] =='y' }--> checked='checked' <!--{ / }-->/>
-                        <label for="rescan" class="check_s <!--{ ?  goodsData.listSearch['reSearch'] =='y' }-->on<!--{ / }-->">{=__('결과 내 재검색')}</label>
-                    </div>
+                <div class="search_again_box">                    
                     <!--{ ? paycosearchUse == false }-->
                     <select name="key" class="chosen-select">
                         <!--{ @ goodsData.listSearch['combineSearch'] }-->
@@ -37,8 +33,12 @@
                     <!--{ / }-->
                     <div class="keyword-div">
                         <input type="text" name="keyword" class="keyword_input" autocomplete="off"/>
+                        <button type="submit" class="btn_goods_search"><em>{=__('검색')}</em></button>
+                    </div>                    
+                    <div class="form_element">
+                        <input type="checkbox" id="rescan" class="checkbox" name="reSearch" value="y" <!--{ ?  goodsData.listSearch['reSearch'] =='y' }--> checked='checked' <!--{ / }-->/>
+                        <label for="rescan" class="check_s <!--{ ?  goodsData.listSearch['reSearch'] =='y' }-->on<!--{ / }-->">{=__('결과 내 재검색')}</label>
                     </div>
-                    <button type="submit" class="btn_goods_search"><em>{=__('검색')}</em></button>
                 </div>
                 <!--{ : }-->
                 <input type="hidden" name="key" value="all" />
@@ -60,6 +60,9 @@
                 <div id="detailSearch" class="dn"></div>
             </form>
         </div>
+    </div>
+
+    <div class="goods_search_cont">        
         <!-- //goods_search_box -->
 
         <div class="goods_pick_list">

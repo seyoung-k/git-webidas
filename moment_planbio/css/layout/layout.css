@@ -362,18 +362,20 @@
 .sub_search_box .chosen-container{width:198px;}
 .sub_search_box .benefit_box{margin:12px 0 0 0;}
 .sub_search_box .benefit_box span{display:inline-block; width:48%; padding:0 0 9px 0;}
+/*
 .sub_search_box .benefit_box span input{display:none;}
 .sub_search_box .benefit_box span label{display:inline-block; font-size:12px; padding-left:22px; cursor:pointer; background:url('../../img/icon/goods_icon/icon_check_off.png') no-repeat left center;}
 .sub_search_box .benefit_box span label:hover{background:url('../../img/icon/goods_icon/icon_check_hover.png') no-repeat left center;}
 .sub_search_box .benefit_box span label.on{background:url('../../img/icon/goods_icon/icon_check_active.png') no-repeat left center;}
+*/
 .sub_search_box .color_box{padding:0 0 10px 0;}
 .sub_search_box .color_box span{display:inline-block; padding-right:2px;}
 .sub_search_box .color_box span input{display:none;}
 .sub_search_box .color_box span label{display:inline-block; width:20px; height:20px; font-size:0; padding:0; cursor:pointer;}
 .sub_search_box .color_box span .active{background-image:url('../../img/icon/goods_icon/icon_color_chk_on.png') !important;}
 .sub_search_box .price_box{margin:12px 0 0 0; display:inline-block;}
-.sub_search_box .price_box input{height:24px; width: 175px; margin: 0 0 10px 0; border:1px solid #ccc; line-height:24px;}
-.sub_search_box .price_box span{display:inline-block; padding:0 5px; font-size:12px; vertical-align:top; line-height:22px;}
+/* .sub_search_box .price_box input{height:24px; width: 175px; margin: 0 0 10px 0; border:1px solid #ccc; line-height:24px;} */
+.sub_search_box .price_box span{display:inline-block; padding:0 5px; vertical-align:top; line-height:22px;}
 .sub_search_box .quick_btn{padding:40px 0; text-align:center;}
 .sub_search_box .quick_btn input{display:inline-block; padding:10px 87px; border:1px solid #979797; background:#979797; color:#fff; cursor:pointer;}
 .sub_search_box .quick_btn input:hover{background:#626262; border:1px solid #626262;}
