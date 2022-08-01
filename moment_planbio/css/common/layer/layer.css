@@ -213,7 +213,7 @@
 .option_layer_cont .btn_cancel{padding:1.5% 4.5%; border:1px solid #cccccc; color:#3e3d3c; background:#ffffff; font-weight:bold;}
 .option_layer_cont .btn_cancel:hover{border:1px solid #bbbbbb; color:#333333;}
 .option_layer_cont .btn_confirm{padding:1.5% 4.5%; margin:0 0 0 5px; border:1px solid #1e1e47 ; color:#ffffff; background:#1e1e47 ; font-weight:bold;}
-.option_layer_cont .btn_confirm:hover{border:1px solid #9b344a; background:#9b344a;}
+.option_layer_cont .btn_confirm:hover{border:1px solid #1e1e48; background:#1e1e48;}
 
 /* 장바구니/찜리스트 담기 레이어 */
 .add_cart_layer, .add_wish_layer{width:405px; min-height:312px;}
@@ -226,9 +226,9 @@
 .add_cart_layer p.fail{background:url('../../../img/common/layer/add_cart_fail.png') no-repeat center top;}
 .add_cart_layer .btn_box, .add_wish_layer .btn_box{padding:29px 0 0 0; text-align:center;}
 .add_cart_layer .btn_cancel, .add_wish_layer .btn_cancel{min-width:74px; padding:10px 10px 9px 10px; border:1px solid #cccccc; color:#3e3d3c; background:#ffffff; font-weight:bold;}
-.add_cart_layer .btn_cancel:hover, .add_wish_layer .btn_cancel:hover{border:1px solid #9b344a; color:#9b344a;}
+.add_cart_layer .btn_cancel:hover, .add_wish_layer .btn_cancel:hover{border:1px solid #1e1e48; color:#1e1e48;}
 .add_cart_layer .btn_confirm, .add_wish_layer .btn_confirm{min-width:74px; padding:10px 10px 9px 10px; margin:0 0 0 6px; border:1px solid #1e1e47 ; color:#ffffff; background:#1e1e47 ; font-weight:bold;}
-.add_cart_layer .btn_confirm:hover, .add_wish_layer .btn_confirm:hover{border:1px solid #9b344a; background:#9b344a;}
+.add_cart_layer .btn_confirm:hover, .add_wish_layer .btn_confirm:hover{border:1px solid #1e1e48; background:#1e1e48;}
 
 
 /* ----------------------------------- 레이어 공통 ----------------------------------- */
@@ -278,7 +278,7 @@
 .sns_copy_url{position:relative; margin:10px 0 0 0;}
 .sns_copy_url input{width:100%; padding-right:90px;}
 .sns_copy_url button{position:absolute; top:0px; right:0px; width:80px; height:31px; color:#ffffff; font-weight:bold; border:1px solid #1e1e47 ; background:#1e1e47 ; font-weight:bold;}
-.sns_copy_url button:hover{border:1px solid #9b344a; background:#9b344a;}
+.sns_copy_url button:hover{border:1px solid #1e1e48; background:#1e1e48;}
 
 /* 상품 확대보기 */
 .layer_wrap.zoom_layer{top:0; left:0;}
@@ -616,7 +616,7 @@
     background-color:rgba(0, 0, 0, 0.6);}
 .review_file_upload .btn_right_box{float:right; width:140px;}
 .review_file_upload .btn_right_box .btn_plus_review_enroll{width:140px; height:60px; color:#ffffff; font-size:15px; font-weight:bold; background:#1e1e47 ;}
-.review_file_upload .btn_right_box .btn_plus_review_enroll:hover{background:#9b344a;}
+.review_file_upload .btn_right_box .btn_plus_review_enroll:hover{background:#1e1e48;}
 
 /* 플러스 리뷰 > 상품후기 상세보기 */
 .layer_wrap.plus_review_view_layer{top:0; left:0;}

@@ -262,7 +262,7 @@ span.form_element{display:inline-block;}
 .adult_wrap .guest_login .login_input_sec{overflow:hidden;}
 .adult_wrap .guest_login .login_input_sec > div{float:left;}
 .adult_wrap .guest_login .login_input_sec button{float:right; width:158px; height:81px; margin:0 0 0 16px; border:1px solid #1e1e47; background:#1e1e47; color:#ffffff; font-size:13px; font-weight:bold; cursor:pointer;}
-.adult_wrap .guest_login .login_input_sec button:hover{background:#9b344a; border:1px solid #9b344a;}
+.adult_wrap .guest_login .login_input_sec button:hover{background:#1e1e48; border:1px solid #1e1e48;}
 .adult_wrap .guest_login .login_sns_sec{margin:20px 0 0 0;}
 .adult_wrap .guest_login .login_sns_sec a{display:block; width:407px; height:62px; margin:0 0 10px 0; text-decoration:none; text-align:center; line-height:62px; color:#333; font-size:15px;}
 .adult_wrap .guest_login .login_sns_sec a img{vertical-align:middle; width:100%;}
@@ -284,7 +284,7 @@ span.form_element{display:inline-block;}
 .adult_wrap .member_certify_box .member_certify li button:hover{border:1px solid #444444; color:#222222;}
 .adult_wrap .member_certify_box .member_certify li:first-child button{margin:0;}
 .guest_btn.base3{border:1px solid #1e1e47; background:#1e1e47; color:#fff;}
-.guest_btn.base3:hover{border:1px solid #9b344a; background:#9b344a;}
+.guest_btn.base3:hover{border:1px solid #1e1e48; background:#1e1e48;}
 .guest_btn.default{border:1px solid #cccccc; color:#3e3d3c;}
 .guest_btn.default:hover{border:1px solid #bbbbbb; color:#333333;}
 .guest_btn {display:inline-block; height:40px;  padding:0 5px; font-size:12px; text-align:center;  vertical-align:top;  box-sizing:border-box;  cursor:pointer;}

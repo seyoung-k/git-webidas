@@ -22,7 +22,7 @@
 .member_cont .member_login_box .login_input_sec > div{float:left;}
 .member_cont .member_login_box .login_input_sec input{display:block; width:292px; height:36px; margin:15px 0 10px 0; padding:0 0 0 8px; border:1px solid #d0d0d0; color:#979d9d;}
 .member_cont .member_login_box .login_input_sec button{float:right; width:158px; height:91px; margin:15px 0 0 0; border:1px solid #1e1e47; background:#1e1e47; color:#ffffff; font-size: 15px; font-weight:bold; cursor:pointer;}
-.member_cont .member_login_box .login_input_sec button:hover{background:#9b344a; border:1px solid #9b344a;}
+.member_cont .member_login_box .login_input_sec button:hover{background:#1e1e48; border:1px solid #1e1e48;}
 .member_cont .member_login_box .id_chk{padding:0 0 26px 0;}
 .member_cont .member_login_box .id_chk p{padding:6px 0 0 0;}
 .member_cont .member_login_box .id_chk span{display:inline-block;}
@@ -40,7 +40,7 @@
 .member_cont .nonmember_order_box .order_input_sec > div{float:left;}
 .member_cont .nonmember_order_box .order_input_sec input{display:block; width:292px; height:36px; margin:15px 0 10px 0; padding:0 0 0 8px; border:1px solid #d0d0d0; color:#979d9d;}
 .member_cont .nonmember_order_box .order_input_sec button{float:right; width:158px; height:91px; margin:15px 0 0 0; border:1px solid #1e1e47; background:#fff; color:#1e1e47; font-size: 15px; font-weight:bold; cursor:pointer;}
-.member_cont .nonmember_order_box .order_input_sec button:hover{border:1px solid #9b344a; color:#9b344a;}
+.member_cont .nonmember_order_box .order_input_sec button:hover{border:1px solid #1e1e48; color:#1e1e48;}
 .member_cont .nonmember_order_box p{padding:0 0 0 18px; background:url('../../img/member/icon_caution.png') no-repeat 0 3px; color:#6d6d6d;}
 
 /* 비밀번호 찾기 */
@@ -87,7 +87,7 @@
 .join_ok_box .btn_member_sec li button{width: 150px; height: 42px; border:1px solid #cccccc; background: #fff; color: #3e3d3c; font-weight:bold; font-size: 13px; cursor:pointer;}
 .join_ok_box .btn_member_sec li button:hover{border:1px solid #bbbbbb; color:#333333;}
 .join_ok_box .btn_member_sec .btn_login{background: #1e1e47; border:1px solid #1e1e47; color: #fff;}
-.join_ok_box .btn_member_sec .btn_login:hover{border:1px solid #9b344a; color: #fff; background:#9b344a;}
+.join_ok_box .btn_member_sec .btn_login:hover{border:1px solid #1e1e48; color: #fff; background:#1e1e48;}
 
 /* 회원승인 대기 */
 .join_wait_box .join_wait_tit{text-align:center; background:url('../../img/member/img_join_wait.png') no-repeat center 0; padding:35px 0 20px 0; border-bottom:1px solid #dbdbdb;}

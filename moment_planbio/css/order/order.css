@@ -14,7 +14,7 @@
 .order_wrap .order_tit h2{float:left; font-size:28px; color:#222222;}
 .order_wrap .order_tit ol{float:right; line-height: 62px;}
 .order_wrap .order_tit ol li{float:left; font-size:14px; color:#d1d1d1;}
-.order_wrap .order_tit .page_on{color:#ab3e55; font-weight:bold;}
+.order_wrap .order_tit .page_on{color:#1e1e47; font-weight:bold;}
 .order_wrap .order_tit li span{font-size:16px; font-weight:bold;}
 .order_wrap .order_tit li span > img{padding:0 14px; vertical-align: -1px;}
 .order_wrap .cart_cont .no_data{padding:60px 0; margin:0 0 20px 0; text-align:center; border-bottom:1px solid #dbdbdb; color:#444;}
@@ -134,8 +134,8 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .price_sum_cont .price_sum_list{position:relative;}
 .price_sum_cont .price_sum_list dl{display:table-cell; padding:5px 10px 5px 10px; font-size:16px; text-align:right;}
 .price_sum_cont .price_sum_list dt{}
-.price_sum_cont .price_sum_list dd{color:#ab3e55;}
-.price_sum_cont .price_sum_list dd strong{font-weight:700; font-size:18px; color:#ab3e55;}
+.price_sum_cont .price_sum_list dd{color:#1e1e47;}
+.price_sum_cont .price_sum_list dd strong{font-weight:700; font-size:18px; color:#1e1e47;}
 .price_sum_cont .price_sum_list .price_total{padding-right:0;}
 .price_sum_cont .price_sum_list .price_total dd{font-size:20px;}
 .price_sum_cont .price_sum_list span{display:table-cell; padding:0 15px 0 15px; text-align:center; vertical-align:middle;}
@@ -196,7 +196,7 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .order_agree{margin:50px 0 0 0; padding:10px 20px 10px 20px; border:1px solid #dbdbdb;}
 .order_agree h4{margin-top:0;}
 .order_agree_cont .agreement_box{overflow-x:hidden; overflow-y:auto; height:60px; margin:0 0 10px 0; padding:20px; border:1px solid #e6e6e6; border-top:1px solid #999999; line-height:18px;}
-.order_agree_cont strong{color:#ab3e55;}
+.order_agree_cont strong{color:#1e1e47;}
 
 /* --------- 배송정보 --------- */
 /* 배송지확인 */
@@ -243,7 +243,7 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 
 /* --------- 결제수단 선택/결제 --------- */
 .payment_progress{}
-.payment_progress .order_zone_tit > p{padding:2px 0 0 0; color:#ab3e55; font-size:12px;}
+.payment_progress .order_zone_tit > p{padding:2px 0 0 0; color:#1e1e47; font-size:12px;}
 .payment_progress_list{padding:10px 0 10px 0; border-top:1px solid #999999;}
 .payment_progress_list dl{display:block; padding:20px 0 15px 0; font-size:0; border-bottom:1px solid #dbdbdb; vertical-align:top;}
 .payment_progress_list dt{display:inline-block; width:180px; padding:0 0 0 24px; font-size:13px; font-weight:bold; vertical-align:top}
@@ -321,10 +321,10 @@ th > .important{margin: 0 0 0 -10px; padding:0 0 0 10px; background:url('../../i
 .payment_final_total{padding:13px 46px 20px 0; border:2px solid #d6d6d6; text-align:right;}
 .payment_final_total dl{display:inline-block; font-size:0;}
 .payment_final_total dt{display:inline-block; padding:0 15px 0 0; font-size:14px; font-weight:bold;}
-.payment_final_total dd{display:inline-block; font-size:30px; color:#ab3e55;}
+.payment_final_total dd{display:inline-block; font-size:30px; color:#1e1e47;}
 .payment_final .payment_final_check{padding:30px 0 20px 0; text-align:center;}
 .payment_final .payment_final_check{}
-.payment_final .form_element label.check_s em b{color:#ab3e55;}
+.payment_final .form_element label.check_s em b{color:#1e1e47;}
 
 /* ------------- 주문완료 ------------- */
 .order_end{}

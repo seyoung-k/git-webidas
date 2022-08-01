@@ -53,11 +53,11 @@
 
 .item_money_box{padding:10px 0 0 0; line-height:1;}
 .item_money_box del{display:block; color:#888888;}
-.item_money_box .item_price{display:block; padding:7px 0 5px 0; font-size:14px; color:#ab3e55;}
+.item_money_box .item_price{display:block; padding:7px 0 5px 0; font-size:14px; color:#1e1e47;}
 .item_money_box .item_price .time_sale_cost{display:inline-block; padding:7px 0 5px 20px; font-size:16px; background:url('../../img/icon/goods_icon/icon_time_sale_cost.png') no-repeat left 7px;}
 .item_money_box .item_price .time_sale_cost_r{display:inline-block; padding-top:5px; font-size:16px;}
 .item_money_box .item_price .time_sale_text{display:inline-block; padding:7px 0 5px 20px; font-size:11px; background:url('../../img/icon/goods_icon/icon_time_sale_cost.png') no-repeat left 7px; color:#888888}
-.item_money_box .item_sale{display:block; padding:3px 0 3px 0; font-size:16px; color:#ab3e55;}
+.item_money_box .item_sale{display:block; padding:3px 0 3px 0; font-size:16px; color:#1e1e47;}
 .item_money_box .item_sale .icon_item_coupon{margin:10px 0 0 0;}
 .item_money_box .item_sale .icon_item_coupon img{vertical-align:middle;}
 .item_money_box .item_mileage{display:block; padding:5px 0 5px 0; line-height:1.5; background:none;}
@@ -87,8 +87,8 @@
 
 .btn_list_get{width:200px; padding:10px 20px; color:#ffffff;  background:#979797;}/* 찜하기 */
 .btn_list_get:hover{background:#626262;}
-.btn_list_cart{width:200px; padding:10px 20px; color:#ffffff; background:#ab3e55;}/* 장바구니 */
-.btn_list_cart:hover{background:#9b344a;}
+.btn_list_cart{width:200px; padding:10px 20px; color:#ffffff; background:#1e1e47;}/* 장바구니 */
+.btn_list_cart:hover{background:#1e1e48;}
 
 /* 리스트그룹형 */
 .item_goods_list{}
@@ -209,7 +209,7 @@
 .item_vl_tab_type .goods_tab_tit ul{margin:40px 0 0 0;}
 .item_vl_tab_type .goods_tab_tit li{width:100%; min-height:10px; margin:0; text-align:left;}
 .item_vl_tab_type .goods_tab_tit li a{display:block; padding:10px 0 10px 0; color:#999999; font-size:13px; border-bottom:1px solid #dadada;}
-.item_vl_tab_type .goods_tab_tit li.on a{color:#ab3e55; font-weight:bold; background:url(../../img/icon/goods_icon/icon_vl_tab.png) no-repeat right center;}
+.item_vl_tab_type .goods_tab_tit li.on a{color:#1e1e47; font-weight:bold; background:url(../../img/icon/goods_icon/icon_vl_tab.png) no-repeat right center;}
 .item_vl_tab_type .goods_tab_cont{padding:0 0 0 200px; min-height:150px;}
 .item_vl_tab_type .goods_tab_cont .goods_tab_box{display:none;}
 .item_vl_tab_type .goods_tab_cont .goods_tab_box.on{display:block}

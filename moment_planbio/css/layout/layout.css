@@ -43,7 +43,7 @@
 .top_member_box > li:last-child a:after {display: none;}
 .top_member_box > li:last-child a {padding-right: 0;}
 /*.top_member_box > li:first-child{border-left:0 none;}*/
-.top_member_box > li strong{color:#ab3e55;}
+.top_member_box > li strong{color:#1e1e47;}
 /* join 캡션 */
 .top_member_box > li .accent span,
 .top_member_box > li .accent strong{display:inline-block; min-width:40px; height:16px; color:#ffffff; font-size:11px; letter-spacing:-1px; line-height:16px;
@@ -519,7 +519,7 @@ input#quickSearchColorFFFFFF+label.active{background-image:url('../../img/icon/g
 .quick_search_cont_box dl dd .benefit_box span label.on{background:url('../../img/icon/goods_icon/icon_check_active.png') no-repeat left center;}
 .quick_search_cont_box .quick_btn{padding:20px 0; text-align:center;}
 .quick_search_cont_box .quick_btn input{display:inline-block; padding:10px 30px; border:1px solid #1e1e47; background:#1e1e47; color:#ffffff; cursor:pointer; font-weight:bold;}
-.quick_search_cont_box .quick_btn input:hover{background:#9b344a; border:1px solid #9b344a;}
+.quick_search_cont_box .quick_btn input:hover{background:#1e1e48; border:1px solid #1e1e48;}
 
 /* 위치 TOP */
 #quick_search.q_top{top:-10000px; left:0; width:100%; margin:0 auto; border-bottom:2px solid #1e1e47;}
@@ -559,7 +559,7 @@ input#quickSearchColorFFFFFF+label.active{background-image:url('../../img/icon/g
 #shop_cart_wrap .cart_tab_wrap{position:relative; height:39px; border-top:2px solid #333333; background:#f2f2f2;}
 #shop_cart_wrap .cart_tab_list{width:1200px; margin:0 auto; font-size:14px;}
 #shop_cart_wrap .btn_shop_buy{display:block; width:200px; height:45px; background:#1e1e47; font-weight:bold; font-size:14px; color:#ffffff; text-align:center;}
-#shop_cart_wrap .btn_shop_buy:hover{background:#9b344a;}
+#shop_cart_wrap .btn_shop_buy:hover{background:#1e1e48;}
 
 .cart_tab_list .on{border-top:2px solid #1e1e47; font-weight:bold; padding-top:0; }
 .cart_tab_list ul{margin:-2px 0 0 0;}
@@ -676,7 +676,7 @@ input#quickSearchColorFFFFFF+label.active{background-image:url('../../img/icon/g
 .option_total_box dl dd{float:right; font-weight:bold; color:#444444}
 .option_total_box .total_price_sec{ padding:17px 0 0 0; border-top:1px solid #dadada; font-size:13px;}
 .option_total_box .total_price_sec dt{font-weight:bold; color:#555555;}
-.option_total_box .total_price_sec strong{color:#9b344a;}
+.option_total_box .total_price_sec strong{color:#1e1e48;}
 .option_total_box .btn_shop_buy{margin:8px 0 0 0;}
 .option_total_box .btn_shop_cart{display:block; width:200px; height:43px; margin:0; border:1px solid #cccccc; background:#ffffff; font-weight:bold; font-size:14px; color:#3e3d3c; text-align:center;}
 .option_total_box .btn_shop_cart:hover{border:1px solid #bbbbbb; color:#333333;}
