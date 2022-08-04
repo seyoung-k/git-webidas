@@ -2,16 +2,22 @@
 { # header }
 
 <div class="content_box">
-    <div class="order_wrap">
-        <div class="order_tit">
-            <h2>{=__('주문완료')}</h2>
-            <ol>
-                <li><span>01</span> {=__('장바구니')} <span><img src="../img/member/icon_join_step_off.png" alt="{=__('장바구니')}{=__('완료')}"></span></li>
-                <li><span>02</span> {=__('주문서작성/결제')}<span><img src="../img/member/icon_join_step_off.png" alt="{=__('주문서작성/결제')}{=__('완료')}"></span></li>
-                <li class="page_on"><span>03</span> {=__('주문완료')}</li>
-            </ol>
-        </div>
-        <!-- //member_tit -->
+    <div class="board_zone_tit">
+        <h2>{=__('주문완료')}</h2>
+    </div>
+    <div class="member-stap">
+        <ol>
+            <li><span>01</span> {=__('장바구니')}</li>
+            <!--{ ? gMemberInfo["memberFl"] == "business" }-->
+            <li><span>02</span> {=__('주문서작성/결제')}</li>
+            <li  class="page_on"><span>03</span> {=__('주문완료')}</li>
+            <!--{ : }-->
+            <li><span>02</span> {=__('상품 주문 요청 완료')}<span></span></li>
+            <!--{ / }-->
+        </ol>
+    </div>
+    <!-- //order_tit -->
+    <div class="order_wrap">       
 
         <div class="order_cont">
             <div class="order_end">
@@ -364,7 +370,7 @@
             </div>
             <!-- //order_info -->
             <div class="btn_center_box">
-                <a href="/" class="btn_order_end_ok"><em>{=__('확인')}</em></a>
+                <a href="/" class="button-l bg-active btn_order_end_ok"><em>{=__('확인')}</em></a>
             </div>
         </div>
         <!-- //order_end -->

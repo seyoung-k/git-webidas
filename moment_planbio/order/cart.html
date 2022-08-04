@@ -2,21 +2,23 @@
 { # header }
 
 <div class="content_box">
-    <div class="order_wrap">
-        <div class="order_tit">
-            <h2>{=__('장바구니')}</h2>
-            <ol>
-                <li class="page_on"><span>01</span> {=__('장바구니')} <span><img src="../img/member/icon_join_step_on.png" alt="{=__('장바구니')}{=__('진행 중')}"></span></li>
-                <!--{ ? gMemberInfo["memberFl"] == "business" }-->
-                <li><span>02</span> {=__('주문서작성/결제')}<span><img src="../img/member/icon_join_step_off.png" alt="{=__('주문서작성/결제')}{=__('대기')}"></span></li>
-                <li><span>03</span> {=__('주문완료')}</li>
-                <!--{ : }-->
-                <li><span>02</span> {=__('상품 주문 요청 완료')}<span></span></li>
-                <!--{ / }-->
-            </ol>
-        </div>
-        <!-- //order_tit -->
+    <div class="board_zone_tit">
+        <h2>{=__('장바구니')}</h2>
+    </div>
+    <div class="member-stap">
+        <ol>
+            <li class="page_on"><span>01</span> {=__('장바구니')}</li>
+            <!--{ ? gMemberInfo["memberFl"] == "business" }-->
+            <li><span>02</span> {=__('주문서작성/결제')}</li>
+            <li><span>03</span> {=__('주문완료')}</li>
+            <!--{ : }-->
+            <li><span>02</span> {=__('상품 주문 요청 완료')}<span></span></li>
+            <!--{ / }-->
+        </ol>
+    </div>
+    <!-- //order_tit -->
 
+    <div class="order_wrap">
         <div class="cart_cont">
 
             <form id="frmCart" name="frmCart" method="post" target="ifrmProcess">
@@ -435,7 +437,7 @@
                                                 <!--{ / }-->
                                                 <span><img src="../img/order/order_price_total.png" alt="{=__('합계')}" /></span>
                                                 <dl class="price_total">
-                                                    <dt>{=__('합계')}</dt>
+                                                    <!-- <dt>{=__('합계')}</dt> -->
                                                     <dd>{=gd_global_currency_symbol()}<strong class="total">{=gd_global_money_format(totalScmGoodsPrice[.key_] - totalScmGoodsDcPrice[.key_] - totalScmMemberDcPrice[.key_] - totalScmMemberOverlapDcPrice[.key_] - totalScmCouponGoodsDcPrice[.key_] + totalScmGoodsDeliveryCharge[.key_])}</strong>{=gd_global_currency_string()}</dd>
                                                 </dl>
                                             </div>
@@ -463,7 +465,7 @@
             </form>
 
             <div class="btn_left_box">
-                <a href="{=shoppingUrl}" class="shop_go_link"><em>&lt; {=__('쇼핑 계속하기')}</em></a>
+                <a href="{=shoppingUrl}" class="button-m"><em>{=__('쇼핑 계속하기')}</em></a>
             </div>
 
             <div class="price_sum">
@@ -510,7 +512,7 @@
                         <!--{ / }-->
                         <span><img src="../img/order/order_price_total.png" alt="{=__('합계')}" /></span>
                         <dl class="price_total">
-                            <dt>{=__('합계')}</dt>
+                            <!-- <dt>{=__('합계')}</dt> -->
                             <dd>{=gd_global_currency_symbol()}<strong id="totalSettlePrice">{=gd_global_money_format(totalSettlePrice)}</strong>{=gd_global_currency_string()}
                                 <!--{ ? gGlobal.isFront && gGlobal.useAddCurrency }-->
                                 <div class="add_currency">{=gd_global_add_currency_symbol()}<em id="totalSettlePriceAdd" >{=gd_global_add_money_format(totalSettlePrice)}</em>{=gd_global_add_currency_string()}</div>
@@ -530,23 +532,23 @@
             <!--{ ? cartCnt > 0 }-->
             <div class="btn_order_box">
                 <span class="btn_left_box">
-                    <button type="button" class="btn_order_choice_del" onclick="gd_cart_process('cartDelete');">{=__('선택 상품 삭제')}</button>
-                    <button type="button" class="btn_order_choice_wish" onclick="gd_cart_process('cartToWish');">{=__('My Inventory 등록')}</button>
+                    <button type="button" class="button-m btn_order_choice_del" onclick="gd_cart_process('cartDelete');">{=__('선택 상품 삭제')}</button>
+                    <button type="button" class="button-m btn_order_choice_wish" onclick="gd_cart_process('cartToWish');">{=__('My Inventory 등록')}</button>
                     <!--{ ? gd_is_plus_shop(c.PLUSSHOP_CODE_CARTESTIMATE) === true && estimateUseFl == 'y' }-->
-                    <button type="button" class="btn_order_choice_wish" onclick="gd_cart_estimate_print();">{=__('견적서 출력')}</button>
+                    <button type="button" class="button-m btn_order_choice_wish" onclick="gd_cart_estimate_print();">{=__('견적서 출력')}</button>
                     <!--{ / }-->
                 </span>
                 <span class="btn_right_box">
                     <!--// 2022-05-13 webidas 추가 : 부속회원일 경우 구매 권한에 따라 주문 버튼 히든처리 -->
                     <!--{ ? gMemberInfo["memberFl"] == "business" }-->
-                    <button type="button" class="btn_order_choice_buy" onclick="gd_cart_process('orderSelect');">{=__('선택 상품 주문')}</button>
-                    <button type="button" class="btn_order_whole_buy" onclick="gd_order_all();">{=__('전체 상품 주문')}</button>
+                    <button type="button" class="button-l btn_order_choice_buy" onclick="gd_cart_process('orderSelect');">{=__('선택 상품 주문')}</button>
+                    <button type="button" class="button-l bg-active btn_order_whole_buy" onclick="gd_order_all();">{=__('전체 상품 주문')}</button>
                     <!--{ : }-->
                         <!--{ ? canBuyAuth == "y" }-->
-                        <button type="button" class="btn_order_choice_buy" onclick="gd_cart_process('orderSelect');">{=__('선택 상품 주문')}</button>
+                        <button type="button" class="button-l btn_order_choice_buy" onclick="gd_cart_process('orderSelect');">{=__('선택 상품 주문')}</button>
                         <!--{ / }-->
                         <!--{ ? recommId }-->
-                        <button type="button" class="btn_order_whole_buy cart_to_recommId">{=__("상품 주문 요청")}</button>
+                        <button type="button" class="button-l btn_order_whole_buy cart_to_recommId">{=__("상품 주문 요청")}</button>
                         <!--{ / }-->
                     <!--{ / }-->
                 </span>

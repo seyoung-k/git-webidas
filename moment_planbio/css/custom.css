@@ -36,9 +36,9 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .location_wrap {border:none; margin-top:20px;}
 
 /* button */
-.button-s {height:30px; line-height: 30px; padding:0 10px; border-radius: 5px; background: #fff; border:1px solid #ddd; font-size:15px; font-weight:400; color:#222;}
-.button-m {height:40px; line-height: 40px; padding:0 20px; border-radius: 5px; background: #fff; border:1px solid #ddd; font-size:15px; font-weight:400; color:#222;}
-.button-l {min-width:160px; height:60px; line-height: 60px; padding:0 20px; border-radius: 10px; background: #fff; border:1px solid #ddd; font-size:16px; font-weight:400; color:#222;}
+.button-s {display:inline-block; height:30px; line-height: 30px; padding:0 10px; border-radius: 5px; background: #fff; border:1px solid #ddd; font-size:15px; font-weight:400; color:#222;}
+.button-m {display:inline-block; height:40px; line-height: 40px; padding:0 20px; border-radius: 5px; background: #fff; border:1px solid #ddd; font-size:15px; font-weight:400; color:#222;}
+.button-l {display:inline-block; min-width:160px; height:60px; line-height: 60px; padding:0 20px; border-radius: 10px; background: #fff; border:1px solid #ddd; font-size:16px; font-weight:400; color:#222;}
 .button-l + .button-l {margin-left:10px;}
 .btn_post_search {border:1px solid #ddd !important; border-radius: 5px !important; height:45px !important; padding:0 20px !important;}
 
@@ -64,7 +64,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 #header .header_search_cont .top_search { position: static; display:inline-block; float: none;}
 #header .top_search {border:none;}
 #header .top_search .top_text_cont {width: 500px; position:relative;}
-#header .top_search .top_text_cont .top_srarch_text {height:50px; border-radius: 50px; border:1px solid #1e1e46; font-size:15px;}
+#header .top_search .top_text_cont .top_srarch_text {height:50px; border-radius: 50px; border:1px solid #1e1e46; font-size:15px; padding-left:25px;}
 #header .top_search .top_text_cont .btn_top_srarch {border:none; right:10px;}
 #header .top_search .search_cont {display:none !important;}
 #header .header_gnb {margin:20px 0 10px;}
@@ -451,8 +451,31 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="file"]:focus
 .sub_search_box .quick_btn {padding:0;}
 .sub_search_box .quick_btn input {padding:0; width:100%;}
 
-/* 장바구니 */
+/* 주문 */
 .order_table_type th {background:#fff; height:55px; font-weight:400; color:#222;}
 .order_table_type td {height:45px; border-left:none !important; border-right:none !important;}
-.order_table_type .pick_add_cont .pick_add_img {padding-right:15px;}
-.order_table_type .pick_add_cont .pick_add_img img {width:100px; height:100px; border-radius: 20px;}
+
+.pick_add_img {padding-right:15px !important;}
+.pick_add_img img {width:100px !important; height:100px !important; border-radius: 20px !important;}
+
+.price_sum {background:#f2f2f2; border:none; padding:65px 0; margin:50px 0 20px;}
+.price_sum_cont {display: block; float: none; text-align: center;}
+.price_sum_cont .price_sum_list{position:relative;display: flex;align-items: center;width: 100%;justify-content: center;}
+.price_sum_cont .price_sum_list dl{display: flex; padding:0; font-size:16px; text-align:right;align-items:baseline;}
+.price_sum_cont .price_sum_list dt {padding:0 15px 0 0; font-size:15px; font-weight:400; color:#666;}
+.price_sum_cont .price_sum_list dd strong {font-size:30px; color:#222;}
+.price_sum_cont .price_sum_list dl.price_total dd strong {color:#380f93;}
+.price_sum_cont .price_sum_list span {padding:0 25px;}
+.cart_cont_list .order_cart_tit h3,
+.order_zone_tit h4 {font-size:22px; font-weight:400; color:#222;}
+.order_cont .table_left th {background:#fff; height:55px; font-weight:400;}
+.order_cont .table_left td {height:45px;}
+table.check tr {border:none !important;}
+table.check tr:last-child td {border:none !important;}
+.payment_final_total {background: #f2f2f2; border:none; padding:30px 0;}
+.payment_final_total dl {display: flex; justify-content: center; align-items: baseline;}
+.payment_final_total dt {font-size: 15px; font-weight: 400;}
+.payment_final_total dd {color:#380f93;}
+.payment_final .payment_final_check {padding:80px 0 45px;}
+.order_cont .order_table_type .form_element label.check_s {padding:0 0 0 32px;}
+.order_end_completion {background: #f2f2f2; border:1px solid #ddd; margin:40px 0 100px;}
