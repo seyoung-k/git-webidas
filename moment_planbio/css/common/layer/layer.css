@@ -201,7 +201,7 @@
 .option_chosen select{width:325px; height:26px; border:1px solid #cccccc;}
 .option_select_box .option_list{margin:30px 0 0 0;}
 
-/* 수량 선택 */
+/* 수량 선택 
 .count{display:table-cell; vertical-align:middle; padding:0 17px;}
 .option_list .goods_qty{display:inline-block; vertical-align:middle;}
 .option_list .goods_qty .text{float:left; padding:0 5px; width:43px; outline:none; height:33px; border:1px solid #ccc; color:#3f3f3f; font-size:12px; line-height:31px; text-align:center;}
@@ -209,6 +209,7 @@
 .option_list .goods_qty span .up{background:url('../../../img/common/btn/btn_count_up.png') no-repeat left top;}
 .option_list .goods_qty span .down{margin:-1px 0 0; background:url('../../../img/common/btn/btn_count_down.png') no-repeat left top;}
 .option_list .goods_qty span button{display:block; width:23px; height:17px; text-indent:-9999px;}
+*/
 .option_layer_cont .btn_box{padding:29px 0 0 0; border-top:2px solid #dbdbdb; text-align:center;}
 .option_layer_cont .btn_cancel{padding:1.5% 4.5%; border:1px solid #cccccc; color:#3e3d3c; background:#ffffff; font-weight:bold;}
 .option_layer_cont .btn_cancel:hover{border:1px solid #bbbbbb; color:#333333;}

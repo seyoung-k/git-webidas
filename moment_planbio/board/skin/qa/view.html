@@ -16,6 +16,24 @@
 	<div class="board_zone_tit">
 		<h2>{=bdView.cfg.bdNm}</h2>
 	</div>
+	<!-- 게시판 서브메뉴 -->
+    <!--{ ? bdView.cfg.bdId == 'notice' || bdView.cfg.bdId == 'qa' || bdView.cfg.bdNm == 'FAQ' || bdView.cfg.bdId == 'PLANDOCS' }-->
+    <ul class="board_sub_menu">
+        <li <!--{ ? bdView.cfg.bdId == 'notice'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=notice">{=__('공지사항')}</a>
+        </li>
+        <li <!--{ ? bdView.cfg.bdId == 'qa'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=qa">{=__('1:1문의')}</a>
+        </li>
+        <li <!--{ ? bdView.cfg.bdNm == 'FAQ'}--> class="on" <!--{/}--> >
+            <a href="../service/faq.php">FAQ</a>
+        </li>
+        <li <!--{ ? bdView.cfg.bdId == 'PLANDOCS'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=PLANDOCS">제품요청</a>
+        </li>
+    </ul>
+    <!--{/}-->
+	
 	<div class="board_zone_cont">
 		<div class="board_zone_view">
 

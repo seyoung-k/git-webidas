@@ -16,7 +16,7 @@
 	<div class="board_zone_tit">
 		<h2>{=__(bdList.cfg.bdNm)}</h2>
 	</div>
-	<div class="board_zone_cont">
+	<div class="board_zone_cont" style="display:none;">
 		<div class="board_zone_list" align="{bdList.cfg.bdAlign}">
 			<table class="board_list_table" {bdList.cfg.bdWidthStyle}>
 				<colgroup>
@@ -76,19 +76,18 @@
 	</div>
 	<!-- //board_zone_cont -->
 
+	<!-- 게시판 서브메뉴 -->
+	<!--{ ? !inList}-->
+    <ul class="board_sub_menu">
+        <li <!--{?req.period == 'all'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=all"><span>{=__('전체')}({=bdList.cnt.totalEventCount})</span></a></li>
+		<li <!--{?req.period == 'current'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=current"><span>{=__('진행중 이벤트')}({=bdList.cnt.currentEventCount})</span></a></li>
+		<li <!--{?req.period == 'end'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=end"><span>{=__('종료된 이벤트')}({=bdList.cnt.endEventCount})</span></a></li>
+    </ul>
+	<!--{/}-->
 	<div class="board_zone_cont">
 		<div class="board_zone_list">
 
-			<div class="board_list_event">
-				<!--{ ? !inList}-->
-				<div class="board_hot_list">
-					<ul>
-						<li <!--{?req.period == 'all'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=all"><span>{=__('전체')}({=bdList.cnt.totalEventCount})</span></a></li>
-						<li <!--{?req.period == 'current'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=current"><span>{=__('진행중 이벤트')}({=bdList.cnt.currentEventCount})</span></a></li>
-						<li <!--{?req.period == 'end'}-->class="on"<!--{/}-->><a href="list.php?bdId={req.bdId}&period=end"><span>{=__('종료된 이벤트')}({=bdList.cnt.endEventCount})</span></a></li>
-					</ul>
-				</div>
-				<!--{/}-->
+			<div class="board_list_event">				
 				<div class="event_list" align="{bdList.cfg.bdAlign}" {bdList.cfg.bdWidthStyle}>
 					<ul>
 						<!--{? bdList.list}-->
@@ -135,11 +134,11 @@
 									</div>
 
 									<div class="board_event_day">
-										<span><strong>{=__('이벤트기간')}</strong> {.eventStart} ~ {.eventEnd}</span>
+										<span><strong class="button-s">{=__('이벤트기간')}</strong> {.eventStart} ~ {.eventEnd}</span>
 									</div>
 									<div class="board_likeit_hits">
-										<!--{ ? bdList.cfg.bdRecommendFl == 'y'}--><span class="board_likeit">{=__('추천')} {.recommend}</span><!--{/}-->
-										<!--{ ? bdList.cfg.bdPcHitFl == 'y'}--><span class="board_hits">{=__('조회')} {.hit}</span><!--{/}-->
+										<!--{ ? bdList.cfg.bdRecommendFl == 'y'}--><span class="board_likeit"><span class="button-s">{=__('추천')}</span>{.recommend}</span><br><!--{/}-->
+										<!--{ ? bdList.cfg.bdPcHitFl == 'y'}--><span class="board_hits"><span class="button-s">{=__('조회')}</span>{.hit}</span><!--{/}-->
 									</div>
 								</div>
 								<!-- //event_info_cont -->

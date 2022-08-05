@@ -174,13 +174,20 @@
                                 <!--{ : }-->
                                 <strong>{=gd_global_currency_display(...price['goodsPriceSubtotal'])}</strong>{=gd_global_add_currency_display(...price['goodsPriceSubtotal'])}
                                 <!--{ / }-->
-                                <div>
-                                    <button type="button" class="goodsCnt_down count_control" data-action="down" data-goodsno="{=...goodsNo}">감소</button>
-                                    <span class="goodsCnt_text">
+                                <div class="goods_qty-s">
+                                    <button type="button" class="down goodsCnt_down count_control" data-action="down" data-goodsno="{=...goodsNo}">감소</button>
+                                    <span class="goodsCnt_text text">
                                     {=...goodsCnt}
-                                    </span>{=__('개')}
-                                    <button type="button" class="goodsCnt_up count_control" data-action="up" data-goodsno="{=...goodsNo}">증가<button>
+                                    </span>
+                                    <button type="button" class="up goodsCnt_up count_control" data-action="up" data-goodsno="{=...goodsNo}">증가<button>
                                 </div>
+                                <!-- <span class="goods_qty">
+                                    <input type="text" class="text goodsCnt_<%=displayOptionkey%>" title="{=__('수량')}" name="goodsCnt[]" value="{=gd_isset(goodsView['defaultGoodsCnt'])}" data-value="{=gd_isset(goodsView['defaultGoodsCnt'])}" data-stock="<%=optionStock%>" data-key="<%=displayOptionkey%>" onchange="goodsViewController.input_count_change(this, '1');return false;" />
+                                    <span>
+                                        <button type="button" class="up goods_cnt" title="{=__('증가')}"  value="up{=c.STR_DIVISION}<%=displayOptionkey%>">{=__('증가')}</button>
+                                        <button type="button" class="down goods_cnt" title="{=__('감소')}"  value="dn{=c.STR_DIVISION}<%=displayOptionkey%>">{=__('감소')}</button>
+                                    </span>
+                                </span> -->
                                 <!--{ ? ...orderPossible === 'y' }-->
                                 <!-- <div class="btn_gray_list">
                                     <a href="#optionViewLayer" class="btn_gray_small btn_open_layer" data-goodsno="{...goodsNo}" data-sno="{...sno}" data-page="wish_modify"><span>{=__('옵션/수량변경')}</span></a>

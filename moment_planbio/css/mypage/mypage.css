@@ -321,8 +321,10 @@
 .category_select .select_box {display:inline-block; margin-bottom:10px;}
 .category_select .category_search_btn {min-width:100px; height:30px; border: 1px solid #1e1e47 ; background:#1e1e47 ; color:#ffffff; font-weight:bold; text-align:center; vertical-align:top;}
 
+/*
 .goodsCnt_up {background:url("../../img/new/btn_count_up.gif") no-repeat 0 0; width:24px; height:24px; font-size:0px;}
 .goodsCnt_down {background:url("../../img/new/btn_count_down.gif") no-repeat 0 0; width:24px; height:24px; font-size:0px;}
+*/
 
 .wish_display_count {float:right; margin-bottom:10px;}
 

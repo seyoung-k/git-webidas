@@ -16,6 +16,24 @@
     <div class="board_zone_tit">
         <h2>{=__(bdWrite.cfg.bdNm)}</h2>
     </div>
+    <!-- 게시판 서브메뉴 -->
+    <!--{ ? bdWrite.cfg.bdId == 'notice' || bdWrite.cfg.bdId == 'qa' || bdWrite.cfg.bdNm == 'FAQ' || bdWrite.cfg.bdId == 'PLANDOCS' }-->
+    <ul class="board_sub_menu">
+        <li <!--{ ? bdWrite.cfg.bdId == 'notice'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=notice">{=__('공지사항')}</a>
+        </li>
+        <li <!--{ ? bdWrite.cfg.bdId == 'qa'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=qa">{=__('1:1문의')}</a>
+        </li>
+        <li <!--{ ? bdWrite.cfg.bdNm == 'FAQ'}--> class="on" <!--{/}--> >
+            <a href="../service/faq.php">FAQ</a>
+        </li>
+        <li <!--{ ? bdWrite.cfg.bdId == 'PLANDOCS'}--> class="on" <!--{/}--> >
+            <a href="../board/list.php?bdId=PLANDOCS">제품요청</a>
+        </li>
+    </ul>
+    <!--{/}-->
+
     <div class="board_zone_cont">
         <form name="frmWrite" id="frmWrite" action="./board_ps.php" method="post" enctype="multipart/form-data" class="frmWrite">
             <input type="hidden" name="bdId" value="{=bdWrite.cfg.bdId}"/>
